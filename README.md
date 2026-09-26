@@ -51,3 +51,10 @@ vagrant reload
 ```powershell
 vagrant package --vagrantfile vagrant_file/Vagrantfile --output rockylinux10_02.box
 ```
+
+## Above Steps are tested below Apps
+
+|App Name|Version|
+|---|---|
+|Vagrant| v2.4.9|
+|Oracle Virtual Box| v7.2.18r175117|
