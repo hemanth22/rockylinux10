@@ -1,0 +1,16 @@
+wget https://download.virtualbox.org/virtualbox/7.2.6/VBoxGuestAdditions_7.2.6.iso
+mkdir -p /opt/VBoxGuestAdditions_7.2.6
+cp /root/VBoxGuestAdditions_7.2.6.iso /opt/
+mount -o loop /opt/VBoxGuestAdditions_7.2.6.iso /opt/VBoxGuestAdditions_7.2.6/
+ls -ltr /opt/VBoxGuestAdditions_7.2.6
+cd /opt/VBoxGuestAdditions_7.2.6
+sh ./VBoxLinuxAdditions.run
+
+ dnf install kernel-devel gcc make perl bzip2 elfutils-libelf-devel wget -y
+ dnf install dkms gcc make kernel-devel kernel-headers bzip2 binutils patch libgomp glibc-headers glibc-devel -y
+ dnf update -y
+
+dnf install wget -y
+
+
+vagrant package --vagrantfile vagrant_file/Vagrantfile --output rockylinux10.box
